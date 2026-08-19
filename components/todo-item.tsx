@@ -63,7 +63,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
   const category = todo.category ? CATEGORY_META[todo.category] : undefined;
 
   return (
-    <li className="flex items-center gap-3 rounded-md border border-border px-3 py-2">
+    <li className="flex items-center gap-3 rounded-md border border-border px-3 py-2 transition-colors hover:border-primary/40 hover:bg-accent/5">
       <Checkbox
         checked={todo.completed}
         onCheckedChange={() => onToggle(todo.id)}

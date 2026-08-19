@@ -49,9 +49,12 @@ export function TodoList() {
       <TodoCategoryFilter value={categoryFilter} onChange={setCategoryFilter} />
 
       {loaded && visibleTodos.length === 0 ? (
-        <p className="py-6 text-center text-sm text-muted-foreground">
-          아직 할 일이 없습니다. 위에 입력해 추가해보세요.
-        </p>
+        <div className="flex flex-col items-center gap-2 py-10 text-center">
+          <span className="text-3xl">🌱</span>
+          <p className="text-sm text-muted-foreground">
+            아직 할 일이 없습니다. 오늘의 첫 줄이 하루를 바꿀 수도 있어요.
+          </p>
+        </div>
       ) : (
         <ul className="flex flex-col gap-2">
           {visibleTodos.map((todo) => (

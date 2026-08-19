@@ -93,7 +93,7 @@
     --chart-3: oklch(0.681 0.162 75.834);
     --chart-4: oklch(0.554 0.135 66.442);
     --chart-5: oklch(0.476 0.114 61.907);
-    --radius: 0;
+    --radius: 0.9rem;
     --sidebar: oklch(0.986 0.002 67.8);
     --sidebar-foreground: oklch(0.147 0.004 49.3);
     --sidebar-primary: oklch(0.511 0.262 276.966);
@@ -146,8 +146,12 @@
     }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 12% -10%, oklch(0.398 0.195 277.366 / 22%), transparent 50%),
+      radial-gradient(circle at 100% 110%, oklch(0.457 0.24 277.023 / 14%), transparent 55%);
+    background-attachment: fixed;
     }
   html {
     @apply font-serif;
+    font-size: 125%;
     }
 }
